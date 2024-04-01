@@ -1,7 +1,5 @@
 
-from  src.functions import *
-import pytest
-import  json
+from functions import *
 
 def test_mask_kard():
     assert mask_kard({"from": "Maestro 1596837868705199"}) == {"from": "Maestro 1596 83** **** 5199"}
