@@ -55,10 +55,10 @@ def mask_account(operation):
     for k, v in operation.items():
 
         if k == "from" and v[-20:].isdigit():
-            operation["from"] = "Счет **" + operation["from"][-4:]
+            operation["from"] = operation["from"][:5] + "**" + operation["from"][-4:]
 
         elif k == "to" and v[-20:].isdigit():
-            operation["to"] = "Счет **" + operation["to"][-4:]
+            operation["to"] = operation["to"][:5] + "**" + operation["to"][-4:]
 
     return operation
 
